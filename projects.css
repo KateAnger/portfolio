@@ -1,0 +1,134 @@
+body {
+    font-family: Montserrat;
+}
+
+.container {
+    /* width: 1200px; */
+    height: 600px;
+    /* height: 100%; */
+}
+
+main {
+    height: 100%;
+    /* width: 100%; */
+}
+
+.grid {
+    display: grid;
+    /* width: 100%;*/
+    height: 100%;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.gridheader {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 12;
+    border: 1px solid black;
+    border-top: 2px solid black;
+    /* background-color: black; */
+    text-align: right;
+    /* vertical-align: middle; */
+    display: grid;
+    justify-items: right;
+    align-items: center;
+    background-color: darkgray;
+}
+
+.gridheader a {
+    padding: 20px;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.background {
+    grid-row: 2 / span 8;
+    grid-column: 1 / span 12;
+    border: 1px solid black;
+    background-color: lightgrey;
+}
+
+.aside1 {
+    display: grid;
+    grid-row: 2 / span 8;
+    grid-column: 1 / span 2;
+    border: 1px solid black;
+    overflow: auto;
+    text-align: center;
+    align-items: center;
+    background-color: salmon;
+}
+
+.article {
+    /* display: grid; */
+    align-items: flex-end; /* I'm guessing don't work without display grid */
+    justify-content: flex-end; /* I'm guessing don't work without display grid */
+
+    grid-row: 2 / span 8;
+    grid-column: 3 / span 8;
+    border: 1px solid  black;
+    background-image: url('pexels-pok-rie-132037.jpg');
+    /* height: 100%; */
+    /* width: 100%; */
+    background-size: cover;
+    color:lightgoldenrodyellow;
+    position: relative; /* to make child position absolute in parent container */
+    /* https://stackoverflow.com/questions/104953/position-an-element-relative-to-its-container */
+
+}
+
+.article h1 {
+    /* grid-row: 2 / span 8; */
+    /* grid-column: 4 / span 2; */
+    background-color: black;
+    /* align-self: flex-end; */
+    /* justify-self: flex-start; */
+    text-align: center;
+    width: 100%;
+    position:absolute;
+    top: 30px;
+    opacity: 0.5;
+    font-size: 2rem;
+    font-family: "Hachi Maru Pop";
+    padding-bottom: 5px;
+}
+
+.article h6 {
+    /* margin: 2px; */
+    margin: 5px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.article a {
+    margin: 0px;
+    color:lightgoldenrodyellow;
+    text-decoration: none;
+}
+.aside2 {
+    display: grid;
+    grid-row: 2 / span 8;
+    grid-column: 11 / span 2;
+    border: 1px solid black;
+    overflow: auto;
+    text-align: center;
+    align-items: center;
+    background-color: aquamarine;
+    /* z-index: 1; */
+
+}
+
+footer {
+    grid-row: 10 / span 1;
+    grid-column: 1 / span 12;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    /* background-color: black; */
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: darkgray;
+}
